@@ -26,15 +26,16 @@ export default function CardPerdido() {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 18,
-    fontWeight: '700',
+    fontSize: 25,
+    fontWeight: '900',
     color: '#111',
-    marginBottom: 14,
+    marginBottom: 20,
   },
   card: {
     backgroundColor: '#EC0E7A',
     borderRadius: 18,
-    padding: 20,
+    paddingVertical: 25,
+    paddingHorizontal: 85 ,
   },
   cardTitle: {
     color: '#fff',

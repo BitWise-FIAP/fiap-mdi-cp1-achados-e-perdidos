@@ -37,7 +37,7 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#f5f5f5', gap: 50 },
+  container: { flex: 1, alignItems: 'center', justifyContent: 'space-around', backgroundColor: '#f5f5f5' },
   titulo:    { fontSize: 32, fontWeight: 'bold', marginBottom: 24 },
   botao:     { backgroundColor: '#E83D84', padding: 16, borderRadius: 12 },
   botaoTexto:{ color: '#fff', fontSize: 16, fontWeight: '600' },
