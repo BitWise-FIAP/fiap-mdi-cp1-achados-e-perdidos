@@ -71,13 +71,13 @@ npx expo start
 📸 Screenshots 
 
 ### 🏠 Home
-![Home](./screens/home.png)
+![Home](./screens/home.jpeg)
 
 ### 📦 Itens
-![Itens](./screens/itens.png)
+![Itens](./screens/itens.jpeg)
 
 ### 👤 Perfil
-![Perfil](./screens/perfil.png)
+![Perfil](./screens/perfil.jpeg)
 
 ### 📝 Cadastro
-![Cadastro](./screens/cadastro.png)
+![Cadastro](./screens/cadastro.jpeg)
