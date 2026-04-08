@@ -1,6 +1,7 @@
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
+import * as ImagePicker from 'expo-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Cadastro() {
@@ -11,6 +12,25 @@ export default function Cadastro() {
   const [data, setData] = useState('');
   const [imagem, setImagem] = useState('');
 
+  const pickImage = async () => {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      Alert.alert('Permissão necessária', 'É preciso permitir acesso à galeria para escolher uma imagem.');
+      return;
+    }
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 0.7,
+    });
+
+    if (!result.canceled) {
+      setImagem(result.assets[0].uri);
+    }
+  };
+
   const handleSubmit = async () => {
     if (!nome || !descricao || !local || !data) {
       Alert.alert('Erro', 'Preencha todos os campos obrigatórios.');
@@ -18,12 +38,12 @@ export default function Cadastro() {
     }
 
     const newItem = {
-      id: Date.now(), // Simple ID
+      id: Date.now(),
       nome,
       descricao,
       local_perdido: local,
       data,
-      imagem: imagem || 'https://via.placeholder.com/300', // Default image
+      imagem: imagem || 'https://via.placeholder.com/300',
     };
 
     try {
@@ -32,7 +52,7 @@ export default function Cadastro() {
       itens.push(newItem);
       await AsyncStorage.setItem('itens', JSON.stringify(itens));
       Alert.alert('Sucesso', 'Item cadastrado com sucesso!');
-      // Reset form
+      
       setNome('');
       setDescricao('');
       setLocal('');
@@ -77,6 +97,14 @@ export default function Cadastro() {
         value={data}
         onChangeText={setData}
       />
+
+      <TouchableOpacity style={styles.imageButton} onPress={pickImage}>
+        <Text style={styles.imageButtonText}>Escolher imagem do iPhone</Text>
+      </TouchableOpacity>
+
+      {imagem ? (
+        <Image source={{ uri: imagem }} style={styles.preview} />
+      ) : null}
 
       <TextInput
         style={styles.input}
@@ -127,6 +155,27 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontSize: 16,
+  },
+  imageButton: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#E83D84',
+    padding: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  imageButtonText: {
+    color: '#E83D84',
+    fontWeight: '600',
+    fontSize: 15,
+  },
+  preview: {
+    width: '100%',
+    height: 180,
+    borderRadius: 12,
+    marginBottom: 16,
+    backgroundColor: '#eee',
   },
   voltar: {
     fontSize: 16,
