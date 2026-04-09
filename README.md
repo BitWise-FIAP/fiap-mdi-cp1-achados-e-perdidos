@@ -1,6 +1,9 @@
 # 📱 Achados e Perdidos - Faculdade
 
 Aplicativo mobile desenvolvido em React Native com o objetivo de facilitar o registro e a busca de itens perdidos dentro do ambiente acadêmico.
+Enrico Ricarte Rodrigues - RM558571 
+Pedro Gaspar Fernandes Ferrari – RM554887 
+Victor Freire Martins Siqueira – RM556191 
 
 ---
 
@@ -68,16 +71,19 @@ npm install
 npx expo start
 ```
 
-📸 Screenshots 
+📸 Screenshots e Gif
+
+### Gif - Sistema 
+![Sistema](./screens/video-gif.gif)
 
 ### 🏠 Home
-![Home](./screens/home.jpeg)
+![Home](./screens/home.png)
 
 ### 📦 Itens
-![Itens](./screens/itens.jpeg)
+![Itens](./screens/itens.png)
 
 ### 👤 Perfil
-![Perfil](./screens/perfil.jpeg)
+![Perfil](./screens/perfil.png)
 
 ### 📝 Cadastro
-![Cadastro](./screens/cadastro.jpeg)
+![Cadastro](./screens/cadastro.png)
