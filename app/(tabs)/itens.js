@@ -3,8 +3,9 @@ import { useRouter } from 'expo-router';
 import { useState, useEffect } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Ionicons } from '@expo/vector-icons';
 
-import itensData from '../storage/itens.json';
+import itensData from '../../storage/itens.json';
 
 export default function Itens() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function Itens() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.titulo}>📦 Itens Perdidos</Text>
+        <Text style={styles.titulo}>Itens Perdidos</Text>
         <Text style={styles.descricao}>Lista completa de itens perdidos e encontrados na FIAP</Text>
       </View>
 
@@ -41,8 +42,16 @@ export default function Itens() {
               <View style={styles.cardContent}>
                 <Text style={styles.nome}>{item.nome}</Text>
                 <Text style={styles.desc}>{item.descricao}</Text>
-                <Text style={styles.local}>📍 {item.local_perdido}</Text>
-                <Text style={styles.data}>📅 {item.data}</Text>
+                {/* <Text style={styles.local}>📍 {item.local_perdido}</Text> */}
+                <View style={styles.row}>
+                  <Ionicons name="location-outline" size={13} color="#EC0E7A" />
+                  <Text style={styles.local}>{item.local_perdido}</Text>
+                </View>
+                {/* <Text style={styles.data}>📅 {item.data}</Text> */}
+                <View style={styles.row}>
+                  <Ionicons name="time-outline" size={13} color="#EC0E7A" />
+                  <Text style={styles.data}>{item.data}</Text>
+                </View>
               </View>
             </View>
           ))
@@ -57,11 +66,9 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#E83D84',
     padding: 20,
-    paddingTop: 40,
+    paddingTop: 20,
     alignItems: 'center',
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    marginBottom: 16,
+    marginBottom: 2,
   },
   titulo: {
     fontSize: 24,
@@ -122,7 +129,12 @@ const styles = StyleSheet.create({
   },
   data: {
     fontSize: 12,
-    color: '#999',
-    marginTop: 4,
+    color: '#999',  
+    marginLeft: 4,
   },
+  row: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  marginTop: 7,
+},
 });

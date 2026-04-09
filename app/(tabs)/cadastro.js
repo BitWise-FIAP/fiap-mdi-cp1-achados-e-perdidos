@@ -67,7 +67,7 @@ export default function Cadastro() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>📝 Cadastrar Item</Text>
+      <Text style={styles.titulo}>Cadastrar Item</Text>
 
       <TextInput
         style={styles.input}

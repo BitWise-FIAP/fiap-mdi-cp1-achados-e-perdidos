@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 const itensRecentes = [
   {
     id: '1',
-    nome: 'Faires',
+    nome: 'Chaves',
     local: 'Recepção',
     data: '08/04/2026',
     imagem: require('../assets/chaves.jpg'),

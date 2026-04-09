@@ -1,9 +1,9 @@
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 
-import CardPerdido from '../components/CardPerdido';
-import CardHome from '../components/CardHome';
-import Carossel from '../components/Carrossel';
+import CardPerdido from '../../components/CardPerdido';
+import CardHome from '../../components/CardHome';
+import Carossel from '../../components/Carrossel';
 
 
 export default function Home() {
