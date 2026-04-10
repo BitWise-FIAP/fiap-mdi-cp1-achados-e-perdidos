@@ -25,23 +25,28 @@ export default function CardPerdido() {
 }
 
 const styles = StyleSheet.create({
-  
   card: {
     backgroundColor: '#EC0E7A',
     borderRadius: 18,
     paddingVertical: 25,
-    paddingHorizontal: 85 ,
+    paddingHorizontal: 20,
+    width: '100%',
   },
   cardTitle: {
     color: '#fff',
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 18,
+    textAlign: 'center',
   },
   button: {
     backgroundColor: '#F1F1F1',
     borderRadius: 14,
-    height: 52,
+    minHeight: 52,
+    width: '100%',
+    maxWidth: 280,
+    alignSelf: 'center',
+    paddingHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -53,5 +58,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#111',
+    flexShrink: 1,
   },
 });
