@@ -62,7 +62,7 @@ export default function Itens() {
 }
 
 const styles = StyleSheet.create({
-  container:  { flex: 1, backgroundColor: '#f5f5f5' },
+  container:  { flex: 1, backgroundColor: '#F9F9FB' },
   header: {
     backgroundColor: '#EC0E7A',
     padding: 20,
@@ -92,7 +92,9 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#EFEFF2',
     borderRadius: 12,
     marginBottom: 16,
     shadowColor: '#000',
