@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 325,
-    backgroundColor: '#F3F3F3',
+    backgroundColor: '#FFFFFF',
     borderRadius: 35,
     padding: 15,
     marginRight: 12,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#E2E2E2',
+    borderColor: '#EFEFF2',
   },
   image: {
     width: 136,

@@ -16,9 +16,9 @@ export default function CardHome({ icon, title, onPress }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: '#EFEFF2',
     borderRadius: 14,
     minHeight: 62,
     paddingHorizontal: 16,

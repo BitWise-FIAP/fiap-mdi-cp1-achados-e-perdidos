@@ -54,7 +54,7 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f5f5f5' },
+  container: { flex: 1, backgroundColor: '#F9F9FB' },
   // titulo:    { fontSize: 32, fontWeight: 'bold', marginBottom: 24 },
    content: {
     padding: 16,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 50,
   },
-  botao:     { backgroundColor: '#E83D84', padding: 16, borderRadius: 12, alignItems: "center" },
+  // botao:     { backgroundColor: '#E83D84', padding: 16, borderRadius: 12, alignItems: "center" },
 
   buttonContainer: {
     alignItems: 'center',

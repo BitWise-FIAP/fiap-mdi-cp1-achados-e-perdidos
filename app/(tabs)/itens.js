@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 20,
     alignItems: 'center',
-    marginBottom: 2,
+   
   },
   titulo: {
     fontSize: 24,
