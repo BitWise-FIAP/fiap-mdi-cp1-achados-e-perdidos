@@ -64,7 +64,7 @@ export default function Itens() {
 const styles = StyleSheet.create({
   container:  { flex: 1, backgroundColor: '#f5f5f5' },
   header: {
-    backgroundColor: '#E83D84',
+    backgroundColor: '#EC0E7A',
     padding: 20,
     paddingTop: 20,
     alignItems: 'center',

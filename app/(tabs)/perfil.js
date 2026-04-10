@@ -12,11 +12,11 @@ export default function Perfil() {
     >
       <View style={styles.headerCard}>
         <View style={styles.avatar}>
-          <Text style={styles.avatarText}>JS</Text>
+          <Text style={styles.avatarText}>VF</Text>
         </View>
 
-        <Text style={styles.nome}>João Silva</Text>
-        <Text style={styles.email}>joao.silva@email.com</Text>
+        <Text style={styles.nome}>Victor Freire</Text>
+        <Text style={styles.email}>rm556191@fiap.com.br</Text>
 
         <TouchableOpacity style={styles.editButton} activeOpacity={0.85}>
           <Ionicons name="create-outline" size={16} color="#FFFFFF" />
@@ -33,7 +33,7 @@ export default function Perfil() {
           </View>
           <View style={styles.infoTextArea}>
             <Text style={styles.infoLabel}>Nome</Text>
-            <Text style={styles.infoValue}>João Silva</Text>
+            <Text style={styles.infoValue}>Victor Freire</Text>
           </View>
         </View>
 
@@ -45,7 +45,7 @@ export default function Perfil() {
           </View>
           <View style={styles.infoTextArea}>
             <Text style={styles.infoLabel}>E-mail</Text>
-            <Text style={styles.infoValue}>joao.silva@email.com</Text>
+            <Text style={styles.infoValue}>rm556191@fiap.com.br</Text>
           </View>
         </View>
 

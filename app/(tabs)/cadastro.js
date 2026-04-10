@@ -127,7 +127,7 @@ export default function Cadastro() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F9F9FB',
     padding: 16,
   },
   titulo: {
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   button: {
-    backgroundColor: '#E83D84',
+    backgroundColor: '#EC0E7A',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
